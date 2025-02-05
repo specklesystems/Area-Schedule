@@ -23,8 +23,16 @@ def test_function_run(test_automation_run_data: AutomationRunData, test_automati
         automation_context,
         automate_function,
         FunctionInputs(
-            forbidden_speckle_type="None",
-            whisper_message=SecretStr("testing automatically"),
+            file_name="TestNameABC",
+            inlcude_areas= True,
+            inlcude_rooms= True,
+            nua_list = "Elevator E1, Level 5 Gross, Live/Work Unit, Machine RM",
+            nia_list = "",
+            nla_list = "Café, Café Kitchen, Corridor, Common, Elevator E1, Level 5 Gross, Live/Work Unit, Machine RM",
+            gia_list = "Café, Café Kitchen, Mezzanine Dining, Common, Elevator E1, Level 5 Gross, Live/Work Unit",
+            gea_list = "Café, Café Kitchen, Common, Elevator E1, Level 5 Gross, Live/Work Unit, Corridor, Commercial/Retail",
+            gla_list = "Residential Lobby, Live/Work Unit, Pocket Park, Outdoor Covered Dining, Elevator",
+            gba_list = "Elevator E2, Café, Café Kitchen, Common, Elevator E1, Level 5 Gross, Live/Work Unit, Outdoor Covered Dining, Elevator"
         ),
     )
 
