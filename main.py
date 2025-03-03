@@ -27,7 +27,7 @@ class FunctionInputs(AutomateBase):
 
     file_name: str = Field(
         title="File Name",
-        description="The name of the Excel file.",
+        description="The name of the Excel file to export.",
     )
 
     inlcude_areas: bool = Field(
@@ -45,6 +45,7 @@ class FunctionInputs(AutomateBase):
     nua_list: str = Field(
         title="NUA (Nett Usable Area)",
         strict= False
+        
     )
 
     nia_list: str = Field(
@@ -135,7 +136,7 @@ def automate_function(
     # List of properties
     list_prop = [
         "category",
-        "level.name",
+        "properties.Level.name",
         "properties.Parameters.Instance Parameters.Identity Data.Name.value",
         "properties.Parameters.Instance Parameters.Dimensions.Area.value",
     ]
