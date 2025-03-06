@@ -43,39 +43,45 @@ class FunctionInputs(AutomateBase):
     )
 
     nua_list: str = Field(
-        title="NUA (Nett Usable Area)",
-        strict= False
-        
+        title="NUA (Optional)",
+        description="Nett Usable Area",
+        default= " "
     )
 
     nia_list: str = Field(
-        title="NIA (Nett Internal Area)",
-        strict= False
+        title="NIA (Optional)",
+        description="Nett Internal Area",
+        default= " "
     )
 
     nla_list: str = Field(
-        title="NLA (Nett Leasable Area)",
-        strict= False
+        title="NLA (Optional)",
+        description="Nett Leasable Area",
+        default= " "
     )
 
     gia_list: str = Field(
-        title="GIA (Gross Internal Area)",
-        strict= False
+        title="GIA (Optional)",
+        description="Gross Internal Area",
+        default= " "
     )
 
     gea_list: str = Field(
-        title="GEA (Gross External Area)",
-        strict= False
+        title="GEA (Optional)",
+        description="Gross External Area",
+        default= " "
     )
 
     gla_list: str = Field(
-        title="GLA (Gross Leasable Area)",
-        strict= False
+        title="GLA (Optional)",
+        description="Gross Leasable Area",
+        default= " "
     )
 
     gba_list: str = Field(
-        title="GBA (Gross Building Area)",
-        strict= False
+        title="GBA (Optional)",
+        description="Gross Building Area",
+        default= " "
     )
 
 
