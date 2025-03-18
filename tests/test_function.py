@@ -22,9 +22,11 @@ def test_function_run(test_automation_run_data: AutomationRunData, test_automati
     automate_sdk = run_function(
         automation_context,
         automate_function,
+
+        #These are test inputs, only work when testing localy.
         FunctionInputs(
-            file_name="TestNameABC",
-            inlcude_areas= True,
+            file_name="TestName",
+            inlcude_areas= False,
             inlcude_rooms= True,
             nua_list = "Elevator E1, Level 5 Gross, Live/Work Unit, Machine RM",
             nia_list = "",

@@ -45,43 +45,43 @@ class FunctionInputs(AutomateBase):
     nua_list: str = Field(
         title="NUA (Optional)",
         description="Nett Usable Area",
-        default= " "
+        default= ""
     )
 
     nia_list: str = Field(
         title="NIA (Optional)",
         description="Nett Internal Area",
-        default= " "
+        default= ""
     )
 
     nla_list: str = Field(
         title="NLA (Optional)",
         description="Nett Leasable Area",
-        default= " "
+        default= ""
     )
 
     gia_list: str = Field(
         title="GIA (Optional)",
         description="Gross Internal Area",
-        default= " "
+        default= ""
     )
 
     gea_list: str = Field(
         title="GEA (Optional)",
         description="Gross External Area",
-        default= " "
+        default= ""
     )
 
     gla_list: str = Field(
         title="GLA (Optional)",
         description="Gross Leasable Area",
-        default= " "
+        default= ""
     )
 
     gba_list: str = Field(
         title="GBA (Optional)",
         description="Gross Building Area",
-        default= " "
+        default= ""
     )
 
 
@@ -129,20 +129,18 @@ def automate_function(
         return
 
     items = []
-    id_lists = []
 
     for i in all_objects:
         if hasattr(i, "category"):  # Check if the object has the "category" attribute
             if i.category in filter_categories:  # Check if the category matches the filter list
                 items.append(i)  # Append the whole object to the items list
-                id_lists.append(i.id)
         else:
             continue  # Skip if "category" does not exist
 
     # List of properties
     list_prop = [
         "category",
-        "properties.Level.name",
+        "level",
         "properties.Parameters.Instance Parameters.Identity Data.Name.value",
         "properties.Parameters.Instance Parameters.Dimensions.Area.value",
     ]
@@ -194,7 +192,7 @@ def automate_function(
         automate_context.store_file_result(f"./{output_file}")
         automate_context.mark_run_success("All data sent successfully! Download your file below.")
     except:
-        automate_context.mark_run_failed("An error occurred while writing to the file. Ensure that the parameters 'Level,' 'Name,' and 'Area' exist. Additionally, verify that the area/room names are correctly typed and separated by commas.") 
+        automate_context.mark_run_failed("An error occurred while writing to the file. Ensure that the parameters Areas or Rooms category exist. Additionally, verify that the area/room names are correctly typed and separated by commas.") 
 
 
 # Function to sum area for each group, ensuring missing levels return 0
