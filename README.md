@@ -1,3 +1,6 @@
+
+![Blog Image_1920x1080 (3)](https://github.com/user-attachments/assets/b8f93e45-595e-4cad-bfc2-5fc830948e03)
+
 # 🚀 Automate Revit Rooms and Areas Scheduling – No Coding Required  
 
 Easily export all **Rooms** and **Areas** by Level into an Excel file in seconds, ensuring **accurate and up-to-date project data**. This automation **eliminates manual effort**, **reduces errors**, and provides a **structured format** for further analysis.  
